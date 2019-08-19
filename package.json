@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-netlify-i18n-demo",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "angeloocana.com",
+  "dependencies": {
+    "gatsby": "^2.13.67",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "intl": "^1.2.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.8.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "jest",
+    "coverage": "codecov"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "jest": "^24.0.0",
+    "prettier": "^1.16.1"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ]
+  }
+}

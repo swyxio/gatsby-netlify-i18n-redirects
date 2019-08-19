@@ -1,0 +1,21 @@
+# example netlify.toml
+[build]
+  command = "yarn run build"
+  functions = "functions"
+  publish = "public"
+
+[dev] # https://github.com/netlify/netlify-dev-plugin#project-detection
+  command = "yarn start" # Command to start your dev server
+  port = 3000 # Port that the dev server will be listening on
+  publish = "dist" # Folder with the static content for _redirect file
+
+[[redirects]]
+  from = "/*"
+  to = "/pt/:splat"
+  status = 302
+  # force = false
+  query = {path = ":path"} # COMMENT: apply this rule for /old-path?path=example
+  # conditions = {Language = ["pt"], Country = ["US"]}
+  conditions = {Language = ["pt"]}
+
+## more info https://www.netlify.com/docs/netlify-toml-reference/
