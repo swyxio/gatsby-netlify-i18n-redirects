@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import SelectLanguage from './SelectLanguage';
+import SelectLanguage from './SelectLanguage'
 
 const Header = (props) => (
   <div
@@ -24,7 +24,7 @@ const Header = (props) => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          Gatsby i18n + Netlify Redirects
         </Link>
       </h1>
       <SelectLanguage langs={props.langs} />
@@ -32,4 +32,4 @@ const Header = (props) => (
   </div>
 )
 
-export default Header;
+export default Header

@@ -1,9 +1,9 @@
-const languages = require('./src/data/languages');
+const languages = require('./src/data/languages')
 
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    languages
+    languages,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,7 +13,8 @@ module.exports = {
         langKeyForNull: 'any',
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: true,
-        prefixDefault: false,
-      }
-    }],
+        // prefixDefault: false, // turns off /en prefix, careful how this interplays with redirects
+      },
+    },
+  ],
 }

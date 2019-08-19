@@ -1,7 +1,7 @@
 # example netlify.toml
 [build]
   command = "yarn run build"
-  functions = "functions"
+  # functions = "functions"
   publish = "public"
 
 [dev] # https://github.com/netlify/netlify-dev-plugin#project-detection
@@ -10,12 +10,21 @@
   publish = "dist" # Folder with the static content for _redirect file
 
 [[redirects]]
+  from = "/en/*"
+  to = "/en/:splat"
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/:splat"
+
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  conditions = {Language = ["en"]}
+[[redirects]]
   from = "/*"
   to = "/pt/:splat"
   status = 302
-  # force = false
-  query = {path = ":path"} # COMMENT: apply this rule for /old-path?path=example
-  # conditions = {Language = ["pt"], Country = ["US"]}
   conditions = {Language = ["pt"]}
 
 ## more info https://www.netlify.com/docs/netlify-toml-reference/
