@@ -8,6 +8,9 @@ const IndexPage = (props) => (
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
+      <p>
+        See <a href="https://github.com/sw-yx/gatsby-netlify-i18n-redirects">Source code</a>.
+      </p>
       <Link to="/en/page-2/">Go to page 2</Link>
     </div>
   </Layout>

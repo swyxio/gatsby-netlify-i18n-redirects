@@ -18,13 +18,13 @@
 
 [[redirects]]
   from = "/*"
-  to = "/en/:splat"
-  status = 302
-  conditions = {Language = ["en"]}
-[[redirects]]
-  from = "/*"
   to = "/pt/:splat"
   status = 302
   conditions = {Language = ["pt"]}
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
+  # conditions = {Language = ["en"]} ## disable for fallback
 
 ## more info https://www.netlify.com/docs/netlify-toml-reference/
